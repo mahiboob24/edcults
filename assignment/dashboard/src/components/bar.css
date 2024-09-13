@@ -1,0 +1,125 @@
+/* src/components/Sidebar.css */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    transition: left 0.3s;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .sidebar.open {
+    left: 0; /* Show when open */
+  }
+  
+  .sidebar-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-item {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .sidebar-item:hover {
+    background-color: #575757;
+  }
+  
+  .sidebar-item svg {
+    margin-right: 10px;
+  }
+  /* src/components/Navbar.css */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: auto;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navbar-item {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-item:hover {
+    background-color: #575757;
+  }
+  
+  .navbar-item svg {
+    margin-right: 8px;
+  }
+  
+  .navbar-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-toggle {
+    display: none; /* Hide toggle button by default */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none; /* Hide menu on small screens */
+    }
+  
+    .navbar-toggle {
+      display: block; /* Show toggle button on small screens */
+    }
+  }
+  
